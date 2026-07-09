@@ -166,20 +166,26 @@ body {
 #s4 .top h2 { font-size: clamp(22px,2.4vw,36px); font-weight:900; color:#fff; }
 #s4 .top p  { font-size: clamp(12px,1.05vw,17px); color:rgba(255,255,255,0.5); margin-top:2px; }
 #s4 .top .art { margin-left:auto; font-size:12px; font-weight:600; color:rgba(255,255,255,0.3); }
-#s4 .flow { flex:1; display:flex; align-items:stretch; padding: clamp(16px,2.5vw,30px) clamp(18px,3vw,48px) 0; gap:0; }
+#s4 .flow { flex:1; display:flex; flex-direction:column; padding: clamp(14px,2vw,26px) clamp(20px,3vw,48px) 0; gap: clamp(10px,1.5vw,18px); }
+#s4 .flow-row { display:flex; align-items:stretch; gap:0; flex:1; }
 .st { flex:1; display:flex; flex-direction:column; align-items:center; }
-.st-card { background:#fff; border-radius:16px; box-shadow:0 3px 16px rgba(13,43,85,0.08); padding: clamp(16px,2vw,26px) clamp(14px,1.5vw,22px); display:flex; flex-direction:column; align-items:center; text-align:center; gap:10px; width:100%; flex:1; border-top:5px solid transparent; }
+.st-card { background:#fff; border-radius:16px; box-shadow:0 3px 16px rgba(13,43,85,0.08); padding: clamp(14px,1.8vw,24px) clamp(14px,1.6vw,22px); display:flex; flex-direction:column; align-items:center; text-align:center; gap:clamp(6px,0.8vw,12px); width:100%; height:100%; border-top:5px solid transparent; }
 .st1 .st-card { border-top-color:var(--amber); } .st2 .st-card { border-top-color:var(--sky); } .st3 .st-card { border-top-color:var(--teal); }
 .st4 .st-card { border-top-color:var(--green); } .st5 .st-card { border-top-color:var(--violet); } .st6 .st-card { border-top-color:var(--coral); }
-.st-num { font-size: 10px; font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--mid); }
-.st-ico { font-size: clamp(32px,3.5vw,52px); line-height:1; }
-.st-tl  { font-size: clamp(13px,1.25vw,18px); font-weight:800; color:var(--navy); line-height:1.25; }
-.st-ds  { font-size: clamp(11px,1vw,15px); color:var(--muted); line-height:1.6; }
-.st-ar  { font-size: 10px; font-weight:600; color:var(--mid); margin-top:auto; }
-.s4-arr { width: clamp(22px,3vw,46px); flex-shrink:0; display:flex; align-items:center; justify-content:center; }
+.st-num { font-size: clamp(9px,0.75vw,11px); font-weight:800; letter-spacing:2px; text-transform:uppercase; color:var(--mid); }
+.st-ico { font-size: clamp(28px,3.2vw,48px); line-height:1; }
+.st-tl  { font-size: clamp(13px,1.3vw,19px); font-weight:800; color:var(--navy); line-height:1.25; }
+.st-ds  { font-size: clamp(11px,1.05vw,15px); color:var(--muted); line-height:1.6; }
+.st-ar  { font-size: clamp(9px,0.75vw,11px); font-weight:600; color:var(--mid); margin-top:auto; padding-top:4px; }
+.s4-arr { width: clamp(20px,2.5vw,40px); flex-shrink:0; display:flex; align-items:center; justify-content:center; }
 .s4-arr-inner { display:flex; flex-direction:column; align-items:center; gap:0; }
-.s4-arr-line { width:2px; height: clamp(28px,4vw,52px); background:linear-gradient(to bottom,var(--sky),var(--teal)); border-radius:2px; }
-.s4-arr-head { width:0; height:0; border-left:7px solid transparent; border-right:7px solid transparent; border-top:11px solid var(--teal); }
+.s4-arr-line { width:2px; height: clamp(24px,3.5vw,44px); background:linear-gradient(to bottom,var(--sky),var(--teal)); border-radius:2px; }
+.s4-arr-head { width:0; height:0; border-left:6px solid transparent; border-right:6px solid transparent; border-top:10px solid var(--teal); }
+.s4-row-connector { display:flex; align-items:center; justify-content:flex-end; padding: 0 clamp(20px,3vw,48px); flex-shrink:0; height: clamp(20px,2vw,32px); }
+.s4-bend { display:flex; align-items:center; gap:0; }
+.s4-bend-line-h { height:2px; width: clamp(40px,5vw,80px); background:linear-gradient(to left,var(--sky),var(--teal)); border-radius:2px; }
+.s4-bend-line-v { width:2px; height: clamp(18px,2vw,28px); background:linear-gradient(to bottom,var(--teal),var(--sky)); border-radius:2px; }
+.s4-bend-corner { width:10px; height:10px; border-bottom:2px solid var(--teal); border-left:2px solid var(--teal); border-radius:0 0 0 6px; }
 #s4 .alert { margin: clamp(12px,1.5vw,20px) clamp(18px,3vw,48px) clamp(10px,1vw,16px); background:rgba(232,160,32,0.08); border:1.5px solid rgba(232,160,32,0.3); border-radius:10px; padding: clamp(12px,1.3vw,18px) clamp(16px,2vw,24px); display:flex; align-items:center; gap:14px; flex-shrink:0; }
 #s4 .alert .ai { font-size: clamp(20px,2vw,28px); }
 #s4 .alert p { font-size: clamp(12px,1.05vw,16px); color:#5B4A00; line-height:1.5; }
@@ -458,17 +464,30 @@ body {
   <section class="page" id="s4" style="position:relative;">
     <div class="top"><div class="ico">🔄</div><div><h2>Fluxo Operacional da Audiência</h2><p>Passo a passo da designação até o arquivamento seguro</p></div><div class="art">Arts. 8º–14º</div></div>
     <div class="flow">
-      <div class="st st1"><div class="st-card"><div class="st-num">Passo 1</div><div class="st-ico">⚖️</div><div class="st-tl">Designar no PJe ou PROJUDI</div><div class="st-ds">Use obrigatoriamente a funcionalidade "Designar Audiência". Nunca apenas por despacho ou peça processual.</div><div class="st-ar">Art. 8º</div></div></div>
-      <div class="s4-arr"><div class="s4-arr-inner"><div class="s4-arr-line"></div><div class="s4-arr-head"></div></div></div>
-      <div class="st st2"><div class="st-card"><div class="st-num">Passo 2</div><div class="st-ico">📱</div><div class="st-tl">Agendar no app Audiência Virtual</div><div class="st-ds">Link do Teams gerado automaticamente. Certidão com endereço eletrônico da audiência juntada nos autos.</div><div class="st-ar">Art. 9º e §ún.</div></div></div>
-      <div class="s4-arr"><div class="s4-arr-inner"><div class="s4-arr-line"></div><div class="s4-arr-head"></div></div></div>
-      <div class="st st3"><div class="st-card"><div class="st-num">Passo 3</div><div class="st-ico">🔧</div><div class="st-tl">Verificar equipamentos</div><div class="st-ds">Conferir computador, câmera, microfone e demais dispositivos antes da audiência.</div><div class="st-ar">Art. 12, § 1º</div></div></div>
-      <div class="s4-arr"><div class="s4-arr-inner"><div class="s4-arr-line"></div><div class="s4-arr-head"></div></div></div>
-      <div class="st st4"><div class="st-card"><div class="st-num">Passo 4</div><div class="st-ico">🎙️</div><div class="st-tl">Iniciar gravação e identificar participantes</div><div class="st-ds">Solicitar nome, função e papel. Individualizar mídias por depoimento.</div><div class="st-ar">Arts. 12, § 3º e 14</div></div></div>
-      <div class="s4-arr"><div class="s4-arr-inner"><div class="s4-arr-line"></div><div class="s4-arr-head"></div></div></div>
-      <div class="st st5"><div class="st-card"><div class="st-num">Passo 5</div><div class="st-ico">☁️</div><div class="st-tl">Encerrar e sincronizar para a nuvem</div><div class="st-ds">Arquivo transferido automaticamente. Falha: abrir chamado no Service Desk em até 48 h.</div><div class="st-ar">Art. 13, §§ 1º e 2º</div></div></div>
-      <div class="s4-arr"><div class="s4-arr-inner"><div class="s4-arr-line"></div><div class="s4-arr-head"></div></div></div>
-      <div class="st st6"><div class="st-card"><div class="st-num">Passo 6</div><div class="st-ico">📋</div><div class="st-tl">Movimentar o processo e conferir a degravação</div><div class="st-ds">Movimentar no sistema judicial. Toda degravação de IA exige conferência humana antes do uso oficial.</div><div class="st-ar">Art. 13, §§ 3º e 4º</div></div></div>
+      <!-- Fila 1: Passos 1, 2, 3 -->
+      <div class="flow-row">
+        <div class="st st1"><div class="st-card"><div class="st-num">Passo 1</div><div class="st-ico">⚖️</div><div class="st-tl">Designar no PJe ou PROJUDI</div><div class="st-ds">Use obrigatoriamente a funcionalidade "Designar Audiência". Nunca apenas por despacho ou peça processual.</div><div class="st-ar">Art. 8º</div></div></div>
+        <div class="s4-arr"><div class="s4-arr-inner"><div class="s4-arr-line"></div><div class="s4-arr-head"></div></div></div>
+        <div class="st st2"><div class="st-card"><div class="st-num">Passo 2</div><div class="st-ico">📱</div><div class="st-tl">Agendar no app Audiência Virtual</div><div class="st-ds">Link do Teams gerado automaticamente. Certidão com endereço eletrônico da audiência juntada nos autos.</div><div class="st-ar">Art. 9º e §ún.</div></div></div>
+        <div class="s4-arr"><div class="s4-arr-inner"><div class="s4-arr-line"></div><div class="s4-arr-head"></div></div></div>
+        <div class="st st3"><div class="st-card"><div class="st-num">Passo 3</div><div class="st-ico">🔧</div><div class="st-tl">Verificar equipamentos</div><div class="st-ds">Conferir computador, câmera, microfone e demais dispositivos antes da audiência.</div><div class="st-ar">Art. 12, § 1º</div></div></div>
+      </div>
+      <!-- Conector em L: fim da linha 1 → início da linha 2 -->
+      <div class="s4-row-connector">
+        <div class="s4-bend">
+          <div class="s4-bend-line-v"></div>
+          <div class="s4-bend-corner"></div>
+          <div class="s4-bend-line-h"></div>
+        </div>
+      </div>
+      <!-- Fila 2: Passos 4, 5, 6 -->
+      <div class="flow-row">
+        <div class="st st4"><div class="st-card"><div class="st-num">Passo 4</div><div class="st-ico">🎙️</div><div class="st-tl">Iniciar gravação e identificar participantes</div><div class="st-ds">Solicitar nome, função e papel. Individualizar mídias por depoimento.</div><div class="st-ar">Arts. 12, § 3º e 14</div></div></div>
+        <div class="s4-arr"><div class="s4-arr-inner"><div class="s4-arr-line"></div><div class="s4-arr-head"></div></div></div>
+        <div class="st st5"><div class="st-card"><div class="st-num">Passo 5</div><div class="st-ico">☁️</div><div class="st-tl">Encerrar e sincronizar para a nuvem</div><div class="st-ds">Arquivo transferido automaticamente. Falha: abrir chamado no Service Desk em até 48 h.</div><div class="st-ar">Art. 13, §§ 1º e 2º</div></div></div>
+        <div class="s4-arr"><div class="s4-arr-inner"><div class="s4-arr-line"></div><div class="s4-arr-head"></div></div></div>
+        <div class="st st6"><div class="st-card"><div class="st-num">Passo 6</div><div class="st-ico">📋</div><div class="st-tl">Movimentar o processo e conferir a degravação</div><div class="st-ds">Movimentar no sistema judicial. Toda degravação de IA exige conferência humana antes do uso oficial.</div><div class="st-ar">Art. 13, §§ 3º e 4º</div></div></div>
+      </div>
     </div>
     <div class="alert"><div class="ai">⚠️</div><p><strong>Atenção:</strong> A degravação automática exige <strong>supervisão humana obrigatória</strong> — conferir a correspondência exata entre áudio e texto antes de qualquer uso oficial ou como prova nos autos. <strong>(Art. 13, § 4º)</strong></p></div>
     <div class="s4-num">04 / 08</div>
