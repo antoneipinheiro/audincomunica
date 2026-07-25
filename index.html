@@ -530,8 +530,8 @@ body {
   </div>
   <!-- TABS -->
   <div class="sb-tabs">
-    <div class="sb-tab" id="tab-conceito" onclick="switchTab('conceito')">Conceito</div>
-    <div class="sb-tab active" id="tab-decreto" onclick="switchTab('decreto')">Decreto</div>
+    <div class="sb-tab" id="tab-conceito" onclick="cycleStarted=true;switchTab('conceito')">Conceito</div>
+    <div class="sb-tab active" id="tab-decreto" onclick="cycleStarted=true;switchTab('decreto')">Decreto</div>
   </div>
   <!-- PANEL: DECRETO -->
   <div class="sb-panel active" id="panel-decreto">
@@ -1933,6 +1933,7 @@ function updateBcNum(id) {
 
 // ── DECRETO nav ──
 function sa(el, title) {
+  cycleStarted = true;
   document.querySelectorAll('#panel-decreto .sn').forEach(n => n.classList.remove('act'));
   if (el) el.classList.add('act');
   document.getElementById('bc').textContent = title;
@@ -1947,6 +1948,7 @@ function gt(i) { document.getElementById(sids[i]).scrollIntoView({ behavior: 'sm
 
 // ── CONCEITO nav ──
 function saC(el, title) {
+  cycleStarted = true;
   document.querySelectorAll('#panel-conceito .sn').forEach(n => n.classList.remove('act'));
   if (el) el.classList.add('act');
   document.getElementById('bc').textContent = title;
@@ -1969,7 +1971,17 @@ function getCurrentIdx() {
   return best;
 }
 
+// Capa (s1) is a standalone opening screen. The first press of Next/→
+// jumps straight into Conceito 01 — Decreto's own 01–08 pass only happens
+// after Conceito's 15 topics are done.
+let cycleStarted = false;
+
 function navNext() {
+  if (!cycleStarted) {
+    cycleStarted = true;
+    switchTab('conceito');
+    return;
+  }
   const ids = activePanel === 'decreto' ? sids : csids;
   const cur = getCurrentIdx();
   if (cur < ids.length - 1) {
@@ -1995,6 +2007,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                    { e.preventDefault(); navPrev(); }
   if (e.key === 'Home') {
     e.preventDefault();
+    cycleStarted = false;
     if (activePanel !== 'decreto') { switchTab('decreto'); }
     else { document.getElementById('s1').scrollIntoView({ behavior: 'smooth' }); }
   }
