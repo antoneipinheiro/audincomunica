@@ -146,7 +146,7 @@ body {
 .sys-pje  { background:rgba(46,156,202,0.2); color:#7DD4F0; }
 .sys-proj { background:rgba(18,168,157,0.2); color:#5FE0D8; }
 .cal-div { width:1px; background:rgba(255,255,255,0.08); margin:0 clamp(14px,2vw,36px); flex-shrink:0; }
-.ph { background:rgba(255,255,255,0.05); border-radius:12px; border-left:4px solid transparent; padding: calc(clamp(10px,1.2vw,14px) * var(--font-scale, 1)) calc(clamp(14px,1.5vw,18px) * var(--font-scale, 1)); display:flex; gap:12px; align-items:flex-start; flex:1; min-height:0; overflow:hidden; }
+.ph { background:rgba(255,255,255,0.05); border-radius:12px; border-left:4px solid transparent; padding: calc(clamp(6px,0.75vw,9px) * var(--font-scale, 1)) calc(clamp(14px,1.5vw,18px) * var(--font-scale, 1)); display:flex; gap:12px; align-items:flex-start; flex:1; min-height:0; overflow:hidden; }
 .ph.ph1 { border-left-color:var(--amber); } .ph.ph2 { border-left-color:var(--sky); } .ph.ph3 { border-left-color:var(--teal); } .ph.ph4 { border-left-color:var(--coral); }
 .ph.ph1 { flex: 0.55 1 0; }
 .ph.ph3 { flex: 0.5 1 0; }
@@ -155,12 +155,13 @@ body {
 .cal-col:last-child .ph.ph4 { flex: 0.4 1 0; }
 .ph.ph4 { flex: 0.7 1 0; }
 .ph.ph-na { border-left-color:rgba(255,255,255,0.12); opacity:.5; flex: 0.32 1 0; }
-.ph-ico { font-size: calc(clamp(22px,2.1vw,25px) * var(--font-scale, 1)); flex-shrink:0; margin-top:2px; }
-.ph-nm { font-size: calc(clamp(16px,1.5vw,19px) * var(--font-scale, 1)); font-weight:700; color:#fff; margin-bottom:4px; line-height:1.2; }
-.ph-rows { display:flex; flex-direction:column; gap:3px; }
+.ph-ico { font-size: calc(clamp(18px,1.7vw,21px) * var(--font-scale, 1)); flex-shrink:0; margin-top:2px; }
+.ph-nm { font-size: calc(clamp(14px,1.3vw,17px) * var(--font-scale, 1)); font-weight:700; color:#fff; margin-bottom:2px; line-height:1.1; }
+.ph-rows { display:flex; flex-direction:column; gap:0px; }
 .ph-row { display:flex; align-items:flex-start; gap:6px; }
-.ph-dot { width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.28); flex-shrink:0; margin-top:7px; }
-.ph-dt { font-size: calc(clamp(13px,1.2vw,15px) * var(--font-scale, 1)); color:rgba(255,255,255,0.6); line-height:1.35; }
+.ph-dot { width:7px; height:7px; border-radius:50%; background:rgba(255,255,255,0.28); flex-shrink:0; margin-top:6px; }
+.ph-dt { font-size: calc(clamp(10.5px,0.95vw,12.5px) * var(--font-scale, 1)); color:rgba(255,255,255,0.6); line-height:1.12; }
+.ph-rows-big .ph-dt { font-size: calc(clamp(13px,1.2vw,15.5px) * var(--font-scale, 1)); line-height:1.3; }
 .ph-dt strong { color:rgba(255,255,255,0.88); font-weight:600; }
 .ph-na-txt { font-size: calc(clamp(11px,0.9vw,12px) * var(--font-scale, 1)); color:rgba(255,255,255,0.3); }
 .s3-tjba { font-size:11px; font-weight:600; color:rgba(255,255,255,0.18); letter-spacing:2px; text-transform:uppercase; padding: 3px calc(clamp(28px,4vw,57px) * var(--font-scale, 1)) 4px; position:relative; z-index:5; }
@@ -245,10 +246,10 @@ body {
 .adl { width:2px; height:7px; background:rgba(255,255,255,0.14); }
 .adh { width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-top:7px solid rgba(255,255,255,0.14); }
 #s6 .rcol { flex:1; min-height:0; overflow:hidden; display:flex; flex-direction:column; gap: calc(clamp(3px,0.45vw,7px) * var(--font-scale, 1)); }
-.info-blk { background:rgba(255,255,255,0.05); border-radius:14px; padding: calc(clamp(3px,0.35vw,5px) * var(--font-scale, 1)) calc(clamp(9px,1.1vw,11px) * var(--font-scale, 1)); border:1px solid rgba(255,255,255,0.07); display:flex; flex-direction:column; gap: calc(clamp(1px,0.2vw,2px) * var(--font-scale, 1)); }
+.info-blk { background:rgba(255,255,255,0.05); border-radius:14px; padding: calc(clamp(2px,0.25vw,4px) * var(--font-scale, 1)) calc(clamp(9px,1.1vw,11px) * var(--font-scale, 1)); border:1px solid rgba(255,255,255,0.07); display:flex; flex-direction:column; gap: calc(clamp(1px,0.2vw,2px) * var(--font-scale, 1)); }
 .info-blk h3 { font-size: calc(clamp(14px,1.3vw,15px) * var(--font-scale, 1)); font-weight:800; color:#fff; display:flex; align-items:center; gap:10px; }
 .info-blk h3 .ih { font-size: calc(clamp(20px,2.0vw,22px) * var(--font-scale, 1)); }
-.rr { display:flex; gap:10px; align-items:flex-start; padding: calc(clamp(1px,0.2vw,3px) * var(--font-scale, 1)) 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+.rr { display:flex; gap:10px; align-items:flex-start; padding: 0; border-bottom:1px solid rgba(255,255,255,0.05); }
 .rr:last-child { border-bottom:none; padding-bottom: 0; }
 .rr-i { font-size: calc(clamp(17px,1.6vw,19px) * var(--font-scale, 1)); flex-shrink:0; margin-top:1px; }
 .rr-tl { font-size: calc(clamp(13px,1.2vw,14px) * var(--font-scale, 1)); font-weight:700; color:rgba(255,255,255,0.82); margin-bottom:3px; }
@@ -556,11 +557,13 @@ h1 .s9-hl { background:linear-gradient(90deg, var(--sky), var(--teal2)); -webkit
   flex-shrink:0; display:flex; align-items:center; gap: calc(clamp(10px,0.73vw,14px) * var(--font-scale, 1));
   background:linear-gradient(90deg, rgba(46,156,202,0.16), rgba(18,168,157,0.10));
   border-left:4px solid var(--sky); border-radius:10px;
-  padding: calc(clamp(3px,0.24vw,5px) * var(--font-scale, 1)) calc(clamp(16px,1.15vw,22px) * var(--font-scale, 1)); margin-bottom: calc(clamp(8px,0.85vw,14px) * var(--font-scale, 1));
+  padding: calc(clamp(2px,0.18vw,4px) * var(--font-scale, 1)) calc(clamp(16px,1.15vw,22px) * var(--font-scale, 1)); margin-bottom: calc(clamp(6px,0.7vw,12px) * var(--font-scale, 1));
 }
 .s9-faq-strip .s9-q-ico { font-size: calc(clamp(19px,1.35vw,26px) * var(--font-scale, 1)); }
 .s9-faq-strip .s9-q-tx { font-size: calc(clamp(14px,1.04vw,20px) * var(--font-scale, 1)); color:rgba(255,255,255,0.9); line-height:1.45; }
 .s9-faq-strip .s9-q-tx strong { color:#fff; }
+#s5b .s9-faq-strip .s9-q-ico { font-size: calc(clamp(11px,0.7vw,14px) * var(--font-scale, 1)); }
+#s5b .s9-faq-strip .s9-q-tx { font-size: calc(clamp(8.5px,0.56vw,10.5px) * var(--font-scale, 1)); line-height:1.18; }
 
 /* ── 3-s9-step hero row ── */
 .s9-steps-label { font-size: calc(clamp(11px,0.75vw,14px) * var(--font-scale, 1)); font-weight:800; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,0.45); margin-bottom: calc(clamp(8px,0.7vw,11px) * var(--font-scale, 1)); }
@@ -584,12 +587,12 @@ h1 .s9-hl { background:linear-gradient(90deg, var(--sky), var(--teal2)); -webkit
 
 /* Cronograma s9-panel */
 .s9-cron-row { display:flex; gap: calc(clamp(12px,0.83vw,16px) * var(--font-scale, 1)); flex:1; min-height:0; }
-.s9-cron-col { flex:1; min-height:0; overflow:hidden; background:rgba(255,255,255,0.045); border-radius:10px; padding: calc(clamp(10px,0.8vw,15px) * var(--font-scale, 1)) calc(clamp(13px,1vw,18px) * var(--font-scale, 1)); }
-.s9-cron-sys { font-size: calc(clamp(16px,1.2vw,21px) * var(--font-scale, 1)); font-weight:800; margin-bottom: calc(clamp(3px,0.4vw,6px) * var(--font-scale, 1)); }
+.s9-cron-col { flex:1; min-height:0; overflow:hidden; background:rgba(255,255,255,0.045); border-radius:10px; padding: calc(clamp(7px,0.55vw,11px) * var(--font-scale, 1)) calc(clamp(13px,1vw,18px) * var(--font-scale, 1)); }
+.s9-cron-sys { font-size: calc(clamp(16px,1.2vw,21px) * var(--font-scale, 1)); font-weight:800; margin-bottom: calc(clamp(2px,0.25vw,4px) * var(--font-scale, 1)); }
 .s9-cron-col:first-child .s9-cron-sys { color:var(--violet); }
 .s9-cron-col:last-child  .s9-cron-sys { color:var(--sky); }
 .s9-cron-date { font-size: calc(clamp(12px,0.88vw,15px) * var(--font-scale, 1)); color:rgba(255,255,255,0.85); font-weight:600; margin-bottom: calc(clamp(2px,0.3vw,4px) * var(--font-scale, 1)); }
-.s9-cron-desc { font-size: calc(clamp(11px,0.8vw,14px) * var(--font-scale, 1)); color:rgba(255,255,255,0.6); line-height:1.15; }
+.s9-cron-desc { font-size: calc(clamp(9.5px,0.68vw,12px) * var(--font-scale, 1)); color:rgba(255,255,255,0.6); line-height:1.05; }
 
 /* Certidão s9-panel */
 .s9-cert-body { font-size: calc(clamp(12px,0.95vw,16px) * var(--font-scale, 1)); color:rgba(255,255,255,0.8); line-height:1.25; flex:0; }
@@ -656,7 +659,7 @@ h1 .s9-hl { background:linear-gradient(90deg, var(--sky), var(--teal2)); -webkit
     <a href="#c12" class="sn" onclick="saC(this,'Resultados Alcançados'); return false;"><div class="sn-num">16</div><div class="sn-ico">🏆</div><div><div class="sn-lbl">Resultados Alcançados</div><div class="sn-art">Ganho de 65% em celeridade</div></div></a>
   </div><!-- /conceito-nav -->
   </div><!-- /panel-conceito -->
-  <div class="sb-foot">Tribunal de Justiça do Estado da Bahia<br><span id="sb-updated">Atualizado em: 26/07/2026, às 14:05:09 (GMT-03:00)</span> <span id="calib-toggle" style="cursor:pointer;opacity:0.3;padding:3px 6px;user-select:none;">•</span></div>
+  <div class="sb-foot">Tribunal de Justiça do Estado da Bahia<br><span id="sb-updated">Atualizado em: 26/07/2026, às 20:49:53.</span> <span id="calib-toggle" style="cursor:pointer;opacity:0.3;padding:3px 6px;user-select:none;">•</span></div>
 </nav>
 
 <!-- ══ MAIN ══ -->
@@ -757,7 +760,7 @@ h1 .s9-hl { background:linear-gradient(90deg, var(--sky), var(--teal2)); -webkit
       <div class="cal-col">
         <div class="cal-col-lbl">Sistema <span class="sys-t sys-proj">PROJUDI</span> — Juizados Especiais</div>
         <div class="ph ph1"><div class="ph-ico">🎓</div><div><div class="ph-nm">Fase I — Capacitação do Usuário</div><div class="ph-rows"><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>Até 31 de julho de 2026</strong> — Curso na Universidade Corporativa</div></div></div></div></div>
-        <div class="ph ph2"><div class="ph-ico">📅</div><div><div class="ph-nm">Fase II — Obrigatoriedade de Agendamento</div><div class="ph-rows"><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>3–7 ago</strong> — 1ª a 10ª Vara JE Consumidor (Capital)</div></div><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>10–14 ago</strong> — 11ª a 20ª Vara JE Consumidor (Capital)</div></div><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>17–21 ago</strong> — JE Causas Comuns, Criminais e Trânsito (Capital)</div></div><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>24–28 ago</strong> — Feira de Santana, Ilhéus, Itabuna, Vitória da Conquista</div></div><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>31 ago – 4 set</strong> — 13 comarcas do interior (Barreiras, Juazeiro, Lauro de Freitas...)</div></div><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>14–30 set</strong> — Demais comarcas (Alagoinhas, Guanambi, Valença...)</div></div></div></div></div>
+        <div class="ph ph2"><div class="ph-ico">📅</div><div><div class="ph-nm">Fase II — Obrigatoriedade de Agendamento</div><div class="ph-rows ph-rows-big"><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>3–7 ago</strong> — 1ª a 10ª Vara JE Consumidor (Capital)</div></div><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>10–14 ago</strong> — 11ª a 20ª Vara JE Consumidor (Capital)</div></div><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>17–21 ago</strong> — JE Causas Comuns, Criminais e Trânsito (Capital)</div></div><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>24–28 ago</strong> — Feira de Santana, Ilhéus, Itabuna, Vitória da Conquista</div></div><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>31 ago – 4 set</strong> — 13 comarcas do interior (Barreiras, Juazeiro, Lauro de Freitas...)</div></div><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>14–30 set</strong> — Demais comarcas (Alagoinhas, Guanambi, Valença...)</div></div></div></div></div>
         <div class="ph ph-na"><div class="ph-ico">➖</div><div><div class="ph-nm">Fase III — Conversão das Audiências</div><div class="ph-na-txt">Não se aplica ao sistema PROJUDI</div></div></div>
         <div class="ph ph4"><div class="ph-ico">⚖️</div><div><div class="ph-nm">Fase IV — Obrigatoriedade de Realização</div><div class="ph-rows"><div class="ph-row"><div class="ph-dot"></div><div class="ph-dt"><strong>Até 8 de setembro de 2026</strong> — Todos os Juizados Especiais</div></div></div></div></div>
       </div>
@@ -841,7 +844,7 @@ h1 .s9-hl { background:linear-gradient(90deg, var(--sky), var(--teal2)); -webkit
     <div style="flex:1;min-height:0;display:flex;gap: calc(clamp(20px,2.6vw,40px) * var(--font-scale, 1));overflow:hidden;">
 
       <!-- Coluna texto -->
-      <div style="flex:1.15;min-height:0;display:flex;flex-direction:column;gap: calc(clamp(4px,0.4vw,7px) * var(--font-scale, 1));overflow:hidden;">
+      <div style="flex:1.15;min-height:0;display:flex;flex-direction:column;gap: calc(clamp(3px,0.32vw,5px) * var(--font-scale, 1));overflow:hidden;">
         <div class="s9-head" style="margin-bottom: calc(clamp(2px,0.25vw,5px) * var(--font-scale, 1));">
           <div class="s9-head-left" style="max-width:100%;">
             <div class="s9-eyebrow"><div class="s9-dot"></div>Audiência Inteligente · Acesso Interno</div>
@@ -849,7 +852,7 @@ h1 .s9-hl { background:linear-gradient(90deg, var(--sky), var(--teal2)); -webkit
             <div class="s9-sub" style="max-width:100%;">Um painel só para quem conduz a audiência — magistrados, juízes leigos e operadores auxiliares</div>
           </div>
         </div>
-        <p style="font-size: calc(clamp(10.5px,0.78vw,12.5px) * var(--font-scale, 1));color:rgba(255,255,255,0.75);line-height:1.22;">A <strong style="color:#fff">Pauta das Audiências</strong> é uma funcionalidade do <strong style="color:#fff">audIN</strong> — painel interno da unidade (diferente do AudinPlay, de acesso público), acessado com login institucional, reunindo toda a pauta do dia num só lugar, sem repasse de links por e-mail ou mensagens.</p>
+        <p style="font-size: calc(clamp(9.5px,0.72vw,11.5px) * var(--font-scale, 1));color:rgba(255,255,255,0.75);line-height:1.18;">A <strong style="color:#fff">Pauta das Audiências</strong> é uma funcionalidade do <strong style="color:#fff">audIN</strong> — painel interno da unidade (diferente do AudinPlay, de acesso público), acessado com login institucional, reunindo toda a pauta do dia num só lugar, sem repasse de links por e-mail ou mensagens.</p>
 
         <div class="info-blk" style="flex-shrink:0;">
           <h3><span class="ih">✨</span> Duas formas de usar</h3>
@@ -1027,7 +1030,7 @@ h1 .s9-hl { background:linear-gradient(90deg, var(--sky), var(--teal2)); -webkit
         </div>
       </div>
     </div>
-    <div class="s9-panel" style="max-width:520px;flex:0 0 520px;">
+    <div class="s9-panel" style="max-width:480px;flex:0 0 480px;">
       <div class="s9-panel-title"><span class="s9-pi">📄</span>Certidão padrão — o essencial</div>
       <div class="s9-cert-body">Certifico que foi designada audiência virtual, com acesso pela plataforma Audiência Virtual no Teams, através do link:</div>
       <div class="s9-cert-link">https://audinplay.tjba.jus.br/consulta-publica/NÚMERO_DO_PROCESSO</div>
@@ -2285,9 +2288,9 @@ document.getElementById('capa').scrollIntoView({ behavior: 'instant' });
   // localStorage). Further local tweaks (via Salvar) still take precedence.
   const DEFAULT_OVERRIDES = {
     c05: 0.84, c06: 1.30, c09: 1.66, c11: 1.36, c12: 1.04,
-    s2: 1.30, s3: 1.18, s4: 1.26, s5: 1.32,
+    s2: 1.30, s3: 1.32, s4: 1.26, s5: 1.32,
     ctx: 1.20, c02: 1.12, c04: 1.20, c08: 1.28, c10: 1.08,
-    s6: 1.30, s8: 1.28, s9: 0.96, pauta: 1.18, s5b: 1.36
+    s6: 1.32, s8: 1.36, s9: 1.02, pauta: 1.18, s5b: 1.66
   };
   const OVERRIDES_KEY = 'audin_font_overrides_v6';
   let overrides = Object.assign({}, DEFAULT_OVERRIDES);
